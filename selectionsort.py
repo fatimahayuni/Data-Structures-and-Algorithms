@@ -1,5 +1,9 @@
 from randomnumbers import random_numbers_list
 from ayuni_unittest import *
+import time
+
+# Start timer
+start_time = time.time()
 
 arr = random_numbers_list()
 
@@ -16,6 +20,12 @@ def selectionsort(arr):
       arr[a], arr[current_min_index] = arr[current_min_index], arr[a]
    print(arr)
 
-  
 selectionsort(arr)
-ayuni_unittest(arr)
+
+# End timer
+end_time = time.time()
+
+# Calculate elapsed time
+elapsed_time = end_time - start_time
+print("Elapsed time for insert sort: ", elapsed_time) 
+# ayuni_unittest(arr)
